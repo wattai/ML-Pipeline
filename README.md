@@ -1,10 +1,36 @@
-ml-pipeline
-==============================
+# ml-pipeline
+
+## Install virtual environment
+
+1. Install pyenv
+1. Run `pyenv install 3.10.1`
+1. Run `pyenv virtualenv 3.10.1 ml-pipeline`
+1. Activate virtualenv `pyenv shell ml-pipeline`
+1. Run `pip install -r requirements.txt`
+1. Run `pip install -r requirements-dev.txt`
+
+## How to reproduce pipeline
+
+1. Activate MLFlow server.
+
+    ```cmd
+    mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts --host 0.0.0.0 -p 1234
+    ```
+
+1. Reproduce an experiment using dvc repro.
+    ```cmd
+    dvc repro
+    ```
+
+## How to run Evidently AI to monitor models
+
+```cmd
+python src/models/model_monitor.py
+```
 
 ML pipeline sample.
 
-Project Organization
-------------
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +77,6 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
---------
+---
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
