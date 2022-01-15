@@ -2,18 +2,17 @@
 -e .
 
 # external requirements
-click
-Sphinx
-coverage
-awscli
-flake8
+click==8.0.*
+Sphinx==4.3.*
+coverage==6.2.*
+awscli==1.22.*
 python-dotenv>=0.5.1
-numpy
-pandas 
-sklearn 
-mlflow
-joblib
-flask 
+numpy==1.22.*
+pandas==1.3.*
+scikit-learn==1.0.*
+mlflow==1.22.*
+joblib==1.1.*
+flask==2.0.*
 
 # backwards compatibility
 pathlib2

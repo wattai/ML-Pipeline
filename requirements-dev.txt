@@ -1,6 +1,10 @@
-black[jupyter]
-isort
-flake8
+# formatter & linter
+black[jupyter]~=21.12b0
+isort==5.10.*
+flake8==4.0.*
 
-pytest
-evidently
+# test
+pytest==6.2.*
+
+# model monitoring
+evidently==0.1.*
