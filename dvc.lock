@@ -8,27 +8,27 @@ stages:
       size: 391872
     - path: src/data/load_data.py
       md5: 8f41ac05efd673287f4f450738ba0ca7
-      size: 1399
+      size: 1448
     outs:
     - path: data/raw/train.csv
       md5: 9b61c38a459d36244dbf8e6940236371
-      size: 116146
+      size: 120397
   split_data:
     cmd: python src/data/split_data.py --config=params.yaml
     deps:
     - path: data/raw/train.csv
       md5: 9b61c38a459d36244dbf8e6940236371
-      size: 116146
+      size: 120397
     - path: src/data/split_data.py
       md5: df8e2d71adc7db6469805eb846bc49da
-      size: 1361
+      size: 1395
     outs:
     - path: data/processed/churn_test.csv
       md5: c3a4965f71511e72d4af9ac650f47505
-      size: 23358
+      size: 24209
     - path: data/processed/churn_train.csv
       md5: 8358e3ab11f8301c58d3b0e5aa99a6fd
-      size: 92916
+      size: 96317
   model_train:
     cmd: python src/models/train_model.py --config=params.yaml
     deps:

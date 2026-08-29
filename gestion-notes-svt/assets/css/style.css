@@ -1,0 +1,10 @@
+body { background: #f5f6f8; }
+.table-decision-V, .badge-V { background-color: #198754 !important; }
+.table-decision-VAR, .badge-VAR { background-color: #0d6efd !important; }
+.table-decision-VPC, .badge-VPC { background-color: #6f42c1 !important; }
+.table-decision-NV, .badge-NV { background-color: #fd7e14 !important; }
+.table-decision-NE, .badge-NE, .table-decision-R, .badge-R { background-color: #dc3545 !important; }
+.badge { color: #fff; font-size: .85em; }
+td input.note-input { width: 5.5rem; }
+.card-module { transition: box-shadow .15s ease-in-out; }
+.card-module:hover { box-shadow: 0 .25rem .75rem rgba(0,0,0,.1); }
